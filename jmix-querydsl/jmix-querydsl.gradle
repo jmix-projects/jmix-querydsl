@@ -1,0 +1,26 @@
+apply plugin: 'java-library'
+
+archivesBaseName = 'jmix-querydsl'
+
+dependencies {
+    implementation 'io.jmix.core:jmix-core-starter'
+    implementation 'io.jmix.data:jmix-eclipselink-starter'
+
+    implementation 'org.postgresql:postgresql'
+
+    testImplementation('org.springframework.boot:spring-boot-starter-test') {
+        exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+    }
+    testImplementation 'org.springframework.boot:spring-boot-starter-web'
+
+    testRuntimeOnly 'org.postgresql:postgresql'
+
+    implementation group: 'com.querydsl', name: 'querydsl-jpa', version: '5.0.0'
+
+    testAnnotationProcessor group: 'com.querydsl', name: 'querydsl-apt', version: '5.0.0', classifier: 'jpa'
+    testAnnotationProcessor configurations.testImplementation
+}
+
+test {
+    useJUnitPlatform()
+}

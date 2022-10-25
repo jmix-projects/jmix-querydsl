@@ -1,0 +1,8 @@
+rootProject.name = 'jmix-querydsl-addon'
+
+include 'jmix-querydsl'
+include 'jmix-querydsl-starter'
+
+rootProject.children.each { p1 ->
+    p1.buildFileName = "${p1.name}.gradle"
+}
