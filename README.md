@@ -122,11 +122,11 @@ for (Tuple tuple : tuples) {
 Integration with JmixDataRepository example. 
 The spring-data project has `org.springframework.data.querydsl.QuerydslPredicateExecutor` interface for integration with Spring Data Repository.
 At the moment, the jmix-querydsl add-on does not have an implementation for `QuerydslPredicateExecutor` interface.
-jmix-querydsl add-on provides `io.jmix.querydsl.JmixQuerydslExecutor` interface (and implementation: `io.jmix.querydsl.impl.JmixQuerydslExecutorImpl`) for integration with `io.jmix.core.repository.JmixDataRepository`.
+jmix-querydsl add-on provides `io.jmix.querydsl.repository.JmixQuerydslExecutor` interface (and implementation: `io.jmix.querydsl.impl.JmixQuerydslExecutorImpl`) for integration with `io.jmix.core.repository.JmixDataRepository`.
 This approach is based on [Entity Framework Querying](https://learn.microsoft.com/en-us/ef/core/querying/).
 
 ```java
-//Enable JmixDataRepositories and override repositoryFactoryBeanClass to `io.jmix.querydsl.JmixQuerydslRepositoryFactoryBean`
+//Enable JmixDataRepositories and override repositoryFactoryBeanClass to `io.jmix.querydsl.repository.JmixQuerydslRepositoryFactoryBean`
 @SpringBootConfiguration
 @EnableAutoConfiguration
 @JmixModule(id = "io.jmix.querydsl.test", dependsOn = JmixQuerydslConfiguration.class)
@@ -143,7 +143,7 @@ public interface CatRepository extends JmixDataRepository<Cat, UUID>, JmixQueryd
 @Autowired
 private CatRepository catRepository;
 
-//method `select()` invoked  JmixQuerydslFactory.from(entityPath).select(entityPath). See implementation in io.jmix.querydsl.impl.JmixQuerydslExecutorImpl
+//method `select()` invoked  JmixQuerydslFactory.from(entityPath).select(entityPath). See implementation in io.jmix.querydsl.repository.impl.JmixQuerydslExecutorImpl
 List<Cat> result = catRepository.select()
         .where(cat.name.eq(select(other.name).from(other)
                 .where(other.name.indexOf("B").eq(0))))

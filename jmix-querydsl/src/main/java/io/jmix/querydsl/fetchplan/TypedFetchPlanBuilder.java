@@ -4,7 +4,6 @@ import com.querydsl.core.types.EntityPath;
 import com.querydsl.core.types.Path;
 import com.querydsl.core.types.dsl.CollectionPathBase;
 import com.querydsl.core.types.dsl.EntityPathBase;
-import com.querydsl.core.types.dsl.SimpleExpression;
 import io.jmix.core.FetchMode;
 import io.jmix.core.FetchPlanBuilder;
 import io.jmix.core.FetchPlans;

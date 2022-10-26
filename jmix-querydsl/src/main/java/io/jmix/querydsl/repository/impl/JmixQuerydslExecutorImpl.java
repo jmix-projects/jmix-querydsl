@@ -1,4 +1,4 @@
-package io.jmix.querydsl.impl;
+package io.jmix.querydsl.repository.impl;
 
 import com.querydsl.core.Tuple;
 import com.querydsl.core.types.EntityPath;
@@ -12,7 +12,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.data.querydsl.EntityPathResolver;
 import org.springframework.data.repository.NoRepositoryBean;
 import io.jmix.querydsl.JmixQuerydslQuery;
-import io.jmix.querydsl.JmixQuerydslExecutor;
+import io.jmix.querydsl.repository.JmixQuerydslExecutor;
 import io.jmix.querydsl.JmixQuerydslFactory;
 
 import java.io.Serializable;

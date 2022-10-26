@@ -5,7 +5,6 @@ import com.querydsl.core.types.Expression;
 import io.jmix.core.repository.ApplyConstraints;
 import io.jmix.core.repository.JmixDataRepository;
 import io.jmix.querydsl.JmixQuerydslQuery;
-import io.jmix.querydsl.JmixQuerydslExecutor;
 import io.jmix.querydsl.domain.Cat;
 
 import java.util.List;

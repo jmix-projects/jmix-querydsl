@@ -2,6 +2,7 @@ package io.jmix.querydsl;
 
 import io.jmix.core.annotation.JmixModule;
 import io.jmix.core.repository.EnableJmixDataRepositories;
+import io.jmix.querydsl.repository.JmixQuerydslRepositoryFactoryBean;
 import org.springframework.boot.SpringBootConfiguration;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceProperties;

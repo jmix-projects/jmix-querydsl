@@ -1,7 +1,8 @@
-package io.jmix.querydsl;
+package io.jmix.querydsl.repository;
 
 import com.querydsl.core.Tuple;
 import com.querydsl.core.types.Expression;
+import io.jmix.querydsl.JmixQuerydslQuery;
 
 public interface JmixQuerydslExecutor<T> {
 

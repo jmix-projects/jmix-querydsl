@@ -22,6 +22,6 @@ import org.springframework.context.annotation.Import;
 
 @AutoConfiguration
 @Import({JmixQuerydslConfiguration.class})
-public class QdAutoConfiguration {
+public class JmixQuerydslAutoConfiguration {
 }
 

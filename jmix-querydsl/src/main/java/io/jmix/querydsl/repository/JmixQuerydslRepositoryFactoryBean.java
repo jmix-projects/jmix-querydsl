@@ -1,9 +1,9 @@
-package io.jmix.querydsl;
+package io.jmix.querydsl.repository;
 
 import io.jmix.core.impl.repository.support.JmixRepositoryFactory;
 import io.jmix.core.impl.repository.support.JmixRepositoryFactoryBean;
 import io.jmix.core.impl.repository.support.method_metadata.CrudMethodMetadataAccessingPostProcessor;
-import io.jmix.querydsl.impl.JmixQuerydslExecutorImpl;
+import io.jmix.querydsl.repository.impl.JmixQuerydslExecutorImpl;
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.data.querydsl.SimpleEntityPathResolver;
