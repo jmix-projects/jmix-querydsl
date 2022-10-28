@@ -23,28 +23,11 @@ QueryDSL guarantees that the compiler will check that your database queries and 
 
 
 ### Installation
-Add to your project's build.gradle dependencies:
-
-`io.jmix:jmix-querydsl-starter:<add-on version>`
-
-where `<add-on version>` is compatible with the used version of the Jmix.
-
-| Jmix Version | Component Version |
-|--------------|-------------------|
-| 1.3.X        | v0.0.3            |
-
-
-### Configuration
-
-After adding the add-on in your application, you need to configure it:
-
-1. Configure your module with JPA entities in the `build.gradle` file of your project.
-
+1. Add to your module with JPA entities in the `build.gradle` dependencies:
  ```groovy
 dependencies {
     // begin: add by yourself
-    implementation group: 'com.querydsl', name: 'querydsl-jpa', version: '5.0.0'
-    annotationProcessor group: 'com.querydsl', name: 'querydsl-apt', version: '5.0.0', classifier: 'jpa'
+    implementation 'io.jmix:jmix-querydsl-starter:0.0.3'
     annotationProcessor configurations.implementation
     // end: add by yourself
 }
@@ -52,7 +35,7 @@ dependencies {
 
 2. Assemble the project. This part is needed to generate QueryDSL classes.
 
-Now you can use type-safe queries in your application.
+Now you can use type-safe queries and typed FetchPlans in your Jmix application.
 
 ### Examples
 
