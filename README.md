@@ -27,7 +27,7 @@ QueryDSL guarantees that the compiler will check that your database queries and 
  ```groovy
 dependencies {
     // begin: add by yourself
-    implementation 'io.jmix:jmix-querydsl-starter:0.0.3'
+    implementation 'io.jmix:jmix-querydsl-starter:0.0.4'
     annotationProcessor configurations.implementation
     // end: add by yourself
 }
