@@ -31,7 +31,7 @@ where `<add-on version>` is compatible with the used version of the Jmix.
 
 | Jmix Version | Component Version |
 |--------------|-------------------|
-| 1.3.X        | v0.0.2            |
+| 1.3.X        | v0.0.3            |
 
 
 ### Configuration

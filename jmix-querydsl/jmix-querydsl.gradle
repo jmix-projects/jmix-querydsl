@@ -15,9 +15,8 @@ dependencies {
 
     testRuntimeOnly 'org.postgresql:postgresql'
 
-    implementation group: 'com.querydsl', name: 'querydsl-jpa', version: '5.0.0'
-
-    testAnnotationProcessor group: 'com.querydsl', name: 'querydsl-apt', version: '5.0.0', classifier: 'jpa'
+    api group: 'com.querydsl', name: 'querydsl-jpa', version: '5.0.0'
+    api group: 'com.querydsl', name: 'querydsl-apt', version: '5.0.0', classifier: 'jpa'
     testAnnotationProcessor configurations.testImplementation
 }
 
