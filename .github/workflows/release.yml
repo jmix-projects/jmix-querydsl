@@ -11,7 +11,7 @@ jobs:
         with:
           java-version: 11
       - name: Publish package
-        run: gradle -Pversion=${{ github.event.release.tag_name }} -x test build publish
+        run: gradle -Pversion=${{ github.event.release.tag_name }} --info -x test build publish
         env:
           GITHUB_REPOSITORY: ${{ github.repository }}
           GITHUB_USERNAME: ${{ github.repository_owner }}

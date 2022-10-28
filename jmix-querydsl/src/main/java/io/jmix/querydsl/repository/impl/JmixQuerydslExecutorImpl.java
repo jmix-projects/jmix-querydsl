@@ -7,6 +7,7 @@ import io.jmix.core.DataManager;
 import io.jmix.core.FetchPlanRepository;
 import io.jmix.core.Metadata;
 import io.jmix.core.UnconstrainedDataManager;
+import io.jmix.core.annotation.Experimental;
 import io.jmix.core.impl.repository.support.method_metadata.CrudMethodMetadata;
 import org.springframework.context.ApplicationContext;
 import org.springframework.data.querydsl.EntityPathResolver;
@@ -18,6 +19,7 @@ import io.jmix.querydsl.JmixQuerydslFactory;
 import java.io.Serializable;
 import java.util.Map;
 
+@Experimental
 @NoRepositoryBean
 public class JmixQuerydslExecutorImpl<T> implements JmixQuerydslExecutor<T> {
 
