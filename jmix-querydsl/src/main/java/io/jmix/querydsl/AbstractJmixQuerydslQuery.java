@@ -33,11 +33,11 @@ import java.util.Map;
  * @param <T> result type
  * @param <Q> concrete subtype
  */
-public abstract class AbstractJmixQuerydslQuerydslQuery<T, Q extends AbstractJmixQuerydslQuerydslQuery<T, Q>> extends JmixQuerydslQueryBase<T, Q> {
+public abstract class AbstractJmixQuerydslQuery<T, Q extends AbstractJmixQuerydslQuery<T, Q>> extends JmixQuerydslQueryBase<T, Q> {
 
     private static final long serialVersionUID = 5397497620388267860L;
 
-    private static final Logger logger = LoggerFactory.getLogger(AbstractJmixQuerydslQuerydslQuery.class);
+    private static final Logger logger = LoggerFactory.getLogger(AbstractJmixQuerydslQuery.class);
 
     protected final Multimap<String, Serializable> hints = LinkedHashMultimap.create();
 
@@ -50,15 +50,15 @@ public abstract class AbstractJmixQuerydslQuerydslQuery<T, Q extends AbstractJmi
     protected final QueryHandler queryHandler;
 
 
-    public AbstractJmixQuerydslQuerydslQuery(DataManager dataManager, Metadata metadata, FetchPlanRepository fetchPlanRepository) {
+    public AbstractJmixQuerydslQuery(DataManager dataManager, Metadata metadata, FetchPlanRepository fetchPlanRepository) {
         this(dataManager, metadata, fetchPlanRepository, EclipseLinkTemplates.DEFAULT, new DefaultQueryMetadata());
     }
 
-    public AbstractJmixQuerydslQuerydslQuery(UnconstrainedDataManager dataManager,
-                                             Metadata metadata,
-                                             FetchPlanRepository fetchPlanRepository,
-                                             JPQLTemplates templates,
-                                             QueryMetadata queryMetadata) {
+    public AbstractJmixQuerydslQuery(UnconstrainedDataManager dataManager,
+                                     Metadata metadata,
+                                     FetchPlanRepository fetchPlanRepository,
+                                     JPQLTemplates templates,
+                                     QueryMetadata queryMetadata) {
         super(queryMetadata, templates);
         this.queryHandler = templates.getQueryHandler();
         this.dataManager = dataManager;
@@ -634,7 +634,7 @@ public abstract class AbstractJmixQuerydslQuerydslQuery<T, Q extends AbstractJmi
         }
 
         public static FetchPlanParam of(Object fetchPlan) {
-            if (fetchPlan instanceof AbstractJmixQuerydslQuerydslQuery.FetchPlanParam) {
+            if (fetchPlan instanceof AbstractJmixQuerydslQuery.FetchPlanParam) {
                 return (FetchPlanParam) fetchPlan;
             }
 

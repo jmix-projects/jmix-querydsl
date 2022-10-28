@@ -18,7 +18,7 @@ import io.jmix.core.UnconstrainedDataManager;
  *
  * Based on {@link org.eclipse.persistence.jpa.JpaQuery}
  */
-public class JmixQuerydslQuery<T> extends AbstractJmixQuerydslQuerydslQuery<T, JmixQuerydslQuery<T>> {
+public class JmixQuerydslQuery<T> extends AbstractJmixQuerydslQuery<T, JmixQuerydslQuery<T>> {
 
     private static final long serialVersionUID = - 9180183730489110259L;
 
